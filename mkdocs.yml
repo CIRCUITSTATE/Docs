@@ -27,6 +27,15 @@ theme:
 
   features:
     - navigation.footer
+    - navigation.path
+    - navigation.tabs.sticky
+    - navigation.indexes
+    - navigation.top
+    - navigation.instant
+    - navigation.instant.progress
+
+repo_url: https://github.com/CIRCUITSTATE/Docs
+repo_name: Docs
 
 # extra:
 #   social:
@@ -40,6 +49,7 @@ copyright: Copyright &copy; 2024 James Willett
 markdown_extensions:
   - attr_list
   - admonition
+  - meta
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
@@ -53,4 +63,37 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
-  
+
+plugins:
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      slide_effect: slide
+      width: 100%
+      height: auto
+      zoomable: true
+      draggable: true
+      skip_classes:
+        - custom-skip-class-name
+      auto_themed: false
+      auto_caption: false
+      caption_position: bottom
+      background: white
+      shadow: true
+      manual: false
+
+nav:
+  - Welcome: index.md
+  - Hardware:
+    - Hardware/index.md
+    - ESPNut:
+      - Hardware/ESPNut/index.md
+      - ESPNut-D1:
+        - Hardware/ESPNut/ESPNut-D1/index.md
+        - R0.1: Hardware/ESPNut/ESPNut-D1/R0.1/index.md
+        - R0.3: Hardware/ESPNut/ESPNut-D1/R0.3/index.md
+
+extra_javascript:
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+  - assets/javascripts/tablesort.js
