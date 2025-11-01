@@ -3,25 +3,26 @@ site_url: https://docs.circuitstate.io
 
 theme:
   name: material
+  logo: assets/images/site/CIRCUITSTATE-R-Emblem-20052024-2.svg
   palette:
     # Dark Mode
     - scheme: slate
       toggle:
         icon: material/weather-sunny
         name: Dark mode
-      primary: blue
-      accent: deep purple
+      primary: custom
+      accent: teal
 
     # Light Mode
     - scheme: default
       toggle:
         icon: material/weather-night
         name: Light mode
-      primary: blue
-      accent: deep orange
+      primary: custom
+      accent: deep purple
   
-  icon:
-    logo: fontawesome/solid/w
+  # icon:
+  #   logo: fontawesome/solid/w
   
   favicon: assets/favicon.ico
 
@@ -36,6 +37,9 @@ theme:
 
 repo_url: https://github.com/CIRCUITSTATE/Docs
 repo_name: Docs
+
+extra_css:
+  - assets/stylesheets/extra.css
 
 # extra:
 #   social:

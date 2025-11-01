@@ -2,7 +2,7 @@
 
 ## Overview
 
-[**ESPNut-D1**](https://github.com/CIRCUITSTATE/ESPNut-D1) (pronounced as **"ee yes peanut"**) is a single-channel USB-to-Serial converter and Auto-Programmer for the ESP32 & ESP8266 series microcontrollers from Espressif. While there exists many such programmers, ESPNut is a completely open-source hardware (OSHW) project designed in the **KiCad** open-source EDA tool. **D1** is the first design variant of this project. You can download the source files of this design, modify them and redistribute them as you wish.
+[**ESPNut-D1**](https://github.com/CIRCUITSTATE/ESPNut-D1) (pronounced as **"ee yes peanut"**) is a single-channel USB-to-Serial converter and Auto-Programmer for the ESP32 & ESP8266 series microcontrollers from *Espressif*. While there exists many such programmers, ESPNut is a completely open-source hardware (OSHW) project designed in the **KiCad** open-source EDA tool. **D1** is the first design variant of this project. You can download the source files of this design, modify them and redistribute them as you wish.
 
 ESPNut-D1 is based on the popular **CH340** series USB-to-Serial converter chip from *WCH*. The serial port of the chip connects to the target microcontroller through its own serial port. Thanks to the built-in serial bootloader of the ESP series microcontrollers, you can effortlessly program them at any time. The ESPNut-D1 makes this process a bit more convenient.
 
@@ -95,37 +95,37 @@ ESPNut-D1 is based on the popular **CH340** series USB-to-Serial converter chip 
 
 ### USB-C Solderpads
 
-| Pin Number | Pin Name | Function      |
-| :--------- | -------- | ------------- |
-| 1          | `GND`    | Ground        |
-| 2          | `DP`     | Data Positive |
-| 3          | `DM`     | Data Minus    |
-| 4          | `VBUS`   | 5V            |
+| Pin Number | Pin Name   | Function      |
+| :--------- | ---------- | ------------- |
+| 1          | **`GND`**  | Ground        |
+| 2          | **`DP`**   | Data Positive |
+| 3          | **`DM`**   | Data Minus    |
+| 4          | **`VBUS`** | 5V            |
 
 ### 6-pin JST-SH Connector / Solderpads
 
-| Pin Number | Pin Name    | Function               |
-| :--------- | ----------- | ---------------------- |
-| 1          | `GND`       | Ground                 |
-| 2          | `ESP_VDD_O` | Power for the target   |
-| 3          | `ESP_TX0`   | ESP UART transmit pin  |
-| 4          | `ESP_RX0`   | ESP UART receive pin   |
-| 5          | `ESP_IO0`   | ESP GPIO0 (Boot Mode)  |
-| 6          | `ESP_NRST`  | ESP Reset (Active Low) |
+| Pin Number | Pin Name        | Function               |
+| :--------- | --------------- | ---------------------- |
+| 1          | **`GND`**       | Ground                 |
+| 2          | **`ESP_VDD_O`** | Power for the target   |
+| 3          | **`ESP_TX0`**   | ESP UART transmit pin  |
+| 4          | **`ESP_RX0`**   | ESP UART receive pin   |
+| 5          | **`ESP_IO0`**   | ESP GPIO0 (Boot Mode)  |
+| 6          | **`ESP_NRST`**  | ESP Reset (Active Low) |
 
 ### ESP-PROG 1.27 mm Header
 
-| Pin Number | Pin Name    | Function               |
-| :--------- | ----------- | ---------------------- |
-| 1          | `ESP_NRST`  | ESP Reset (Active Low) |
-| 2          | `ESP_VDD_O` | Power for the target   |
-| 3          | `ESP_TX0`   | ESP UART transmit pin  |
-| 4          | `GND`       | Ground                 |
-| 5          | `ESP_RX0`   | ESP UART receive pin   |
-| 6          | `ESP_IO0`   | ESP GPIO0 (Boot Mode)  |
+| Pin Number | Pin Name        | Function               |
+| :--------- | --------------- | ---------------------- |
+| 1          | **`ESP_NRST`**  | ESP Reset (Active Low) |
+| 2          | **`ESP_VDD_O`** | Power for the target   |
+| 3          | **`ESP_TX0`**   | ESP UART transmit pin  |
+| 4          | **`GND`**       | Ground                 |
+| 5          | **`ESP_RX0`**   | ESP UART receive pin   |
+| 6          | **`ESP_IO0`**   | ESP GPIO0 (Boot Mode)  |
 
 
-## Schematics
+## Schematic
 
 ![ESPNut-D1-R0.3 Schematic](../../../../assets/hardware/ESPNut/D1/R0.3/ESPNut-D1-R0.3-SCH-02082025-1_1.png)
 ESPNut-D1-R0.3 Schematic
@@ -152,19 +152,28 @@ ESPNut-D1-R0.3 Dimensions
 
 ## Assembly Instructions
 
-If you fabricate the PCB yourself, you can place and solder the components manually or use an automated assembly service. For manually assembly, the HTML BoM is extremely useful. The solder paste can be applied manually or using a stencil. For reflowing, you can use a hot plate or a reflow oven.
+If you fabricate the PCB yourself, you can place and solder the components manually or use an automated assembly service. For manual assembly, the **HTML BoM** is extremely useful. The solder paste can be applied manually or using a stencil. For reflowing, you can use a hot plate or a reflow oven.
 
-For automated assembly, you can use the Position or Centroid files for programming a pick-and-place (PnP) machine. A panelized PCB is better for automated assembly.
+For automated assembly, you can use the **Position/Centroid** files for programming a pick-and-place (PnP) machine. A panelized PCB is better for automated assembly.
 
 ## Usage
 
-ESPNut-D1 can function as both a USB-to-Serial UART converter as well as an ESP programmer. In addition, the ESPNut-D1 can also supply power to the target device and control it. If your target device expects a 5V supply, put the `VSEL` switch to the `5V` position. If it expects a 3.3V supply, put the `VSEL` switch to the `3.3V` position. Always set the output voltage before connecting the target device or USB power. If your target is externally powered, then you don't need to connect the power output of the ESPNut-D1 to the target. Only connects `GND` supplies together for a common ground. Regardless of the target supply voltage, all other signals from the ESPNut-D1 board will be at 3.3V logic levels. When the USB-C is connected, the `VBUS` LED will turn on. In case, the USB connector is damaged or not working, you can solder wires to the USB breakout solderpads.
+ESPNut-D1 can function as both a **USB-to-Serial UART Converter** as well as an **ESP Programmer**. In addition, the ESPNut-D1 can also supply power to the target device and control it. If your target device expects a 5V supply, put the `VSEL` switch to the `5V` position. If it expects a 3.3V supply, put the `VSEL` switch to the `3.3V` position. Always set the output voltage before connecting the target device or USB power. If your target is externally powered, then you don't need to connect the power output of the ESPNut-D1 to the target. Only connects `GND` supplies together for a common ground. Regardless of the target supply voltage, all other signals from the ESPNut-D1 board will be at 3.3V logic levels. When the USB-C is connected, the `VBUS` LED will turn on. In case the USB connector is damaged or not working, you can solder wires to the USB breakout solderpads.
 
-When the power is supplied to the target through ESPNut-D1, you can turn it on or off using the `PSW` slide switch. The extra `PCTRL` button can momentarily disconnect the power to the target. This is useful for putting ESP boards without a RESET button into the bootloader mode. The power to the target is controlled through an electronic load switch. In case you want to bypass this feature, you can short the `BYP` solder-jumper. When the target power is on, the target power LED will turn on.
+!!! danger
+
+    Supplying power to the target device with the wrong voltage selection may permanently damage your target device. Always double-check the voltage selection before connecting the target device.
+
+![Wiring ESPNut-D1-R0.3 with ESP12E ESP8266 module](../../../../assets/hardware/ESPNut/D1/R0.3/ESPNut-D1-R0.3-Wiring-with-ESP12E-R0.1-CIRCUITSTATE-Electronics-1_1.png)
+Wiring ESPNut-D1-R0.3 with ESP12E ESP8266 module
+
+- [Download Wiring [PDF]](../../../../assets/hardware/ESPNut/D1/R0.3/ESPNut-D1-R0.3-Wiring-with-ESP12E-R0.1-CIRCUITSTATE-Electronics-1.pdf)
+
+When the power is supplied to the target through ESPNut-D1, you can turn it on or off using the `PSW` slide switch. The extra `PCTRL` button can momentarily disconnect the power to the target. This is useful for putting ESP boards without a reset button into the bootloader mode. The power to the target is controlled through an electronic load switch. In case you want to bypass this feature, you can short the `BYP` solder-jumper. When the target power is on, the target power LED will turn on.
 
 ### USB-to-Serial Converter
 
-The CH340G/C is a single channel USB 2.0 to serial UART converter with a maximum baud rate of 2 Mbps. To use ESPNut-D1 as a USB-Serial converter, simply connect it to your computer using a USB-C cable. The CH340 driver must be installed on your computer for it to be recognized properly. Once the driver is installed, the ESPNut-D1 will appear as a COM port (on Windows) or a `/dev/ttyUSBx` device (on Linux/Mac). Then you can use any serial terminal applications to send or receive data from a compatible microcontroller or device. The data will appear on the `TX` and `RX` pins of the 6-pin JST-SH connector or the solder pads. When there is active data transmission, the respective `TX` and `RX` activity LEDs will blink. For short burst of data, the LEDs may not blink visibly and it is as per design.
+The **CH340G/C** is a single channel USB 2.0 to serial UART converter with a maximum baud rate of 2 Mbps. To use ESPNut-D1 as a USB-Serial converter, simply connect it to your computer using a USB-C cable. The CH340 driver must be installed on your computer for it to be recognized properly. Once the driver is installed, the ESPNut-D1 will appear as a COM port (on Windows) or a `/dev/ttyUSBx` device (on Linux/Mac). Then you can use any serial terminal applications to send or receive data from a compatible microcontroller or device. The data will appear on the `TX` and `RX` pins of the 6-pin JST-SH connector or the solder pads. When there is active data transmission, the respective `TX` and `RX` activity LEDs will blink. For short burst of data, the LEDs may not blink visibly and it is as per design.
 
 Even though normally not used, there are additional breakout pins for the CH340 chip on the PCB. You can find these pins as solder pads on the back side of the PCB.
 
@@ -172,16 +181,16 @@ Even though normally not used, there are additional breakout pins for the CH340 
 
 To use the ESPNut-D1 as an ESP programmer, you need to connect the target's `TX`, `RX`, `IO0` and `NRST` pins to the respective pins on the ESPNut-D1. Use cross-connection for the `TX` and `RX` pins. The target must be powered either from the ESPNut-D1 or from an external power supply. When both the `NRST` and `IO0` pins are available, the programmer can automatically put the target into the bootloader mode and reset it during programming. This is achieved with the auto-programming circuit recommended and used by *Espressif*. Additionally, you can also use the `RESET` and `BOOT` buttons on the ESPNut-D1 to manually reset the target or put it into the bootloader mode. Holding the `BOOT` button while pressing and releasing the `RESET` button will also put the target into the bootloader mode. If a RESET signal is not available on the target for some reason, you can perform the same operation using the `PCTRL` button to momentarily disconnect the power to the target while the `BOOT` button is pressed. After programming is complete, you can use the ESPNut-D1 as a normal USB-Serial converter to communicate with the target.
 
-If your target board does not have pull-up resistors and causing issues, you can enable them by shorting the `RP` and `BP` solder jumpers. If your target board has an ESP-Prog connector, you can connect it directly to the ESPNut-D1 using a compatible cable. Otherwise, you can use the 6-pin JST-SH connector or solder pads to connect to the target. Supported targets are,
+If your target board does not have pull-up resistors and causing issues, you can enable them by shorting the `RP` and `BP` solder jumpers. If your target board has an ESP-Prog connector, you can connect it directly to the ESPNut-D1 using a compatible cable. Otherwise, you can use the 6-pin JST-SH connector or solder pads to connect to the target. Supported programmable targets are,
 
-  * ESP8266
-  * ESP8285
-  * ESP32
-  * ESP32-S2
-  * ESP32-C3
-  * ESP32-S3
-  * ESP32-C6
-  * ESP32-H2
+  - ESP8266
+  - ESP8285
+  - ESP32
+  - ESP32-S2
+  - ESP32-C3
+  - ESP32-S3
+  - ESP32-C6
+  - ESP32-H2
 
 ## Troubleshooting
 
@@ -200,5 +209,6 @@ No known issues at this moment.
 
 - [ESPNut-D1 GitHub Repository](https://github.com/CIRCUITSTATE/ESPNut-D1)
 - [ESPNut-D1-R0.3 Release](https://github.com/CIRCUITSTATE/ESPNut-D1)
+- [Installing CH340 Drivers - SparkFun](https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all)
 
 

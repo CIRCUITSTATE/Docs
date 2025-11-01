@@ -1,0 +1,80 @@
+
+/* Custom primary color for light mode*/
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #2c5976;
+}
+
+/* Custom primary color for dark mode */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #57ace5;
+}
+
+/* Change top bar background color */
+.md-header {
+  background-color: #2c5976 !important;
+}
+
+/* Adjust logo size */
+.md-header__button.md-logo img, 
+.md-header__button.md-logo svg {
+  height: 40px; /* adjust as needed */
+  width: auto;
+}
+
+/* Table row colors - Light Mode */
+[data-md-color-scheme="default"] {
+  .md-typeset table:not([class]) thead th {
+    background-color: #647c8c; /* your chosen color */
+    color: #ffffff;            /* make sure text is readable */
+  }
+  .md-typeset table:not([class]) tbody tr:nth-child(odd) {
+    background-color: #f1f1f1; /* darker row */
+  }
+
+  .md-typeset table:not([class]) tbody tr:nth-child(even) {
+    background-color: #f8f8f8; /* lighter row */
+  }
+}
+
+/* Table row colors - Dark Mode */
+[data-md-color-scheme="slate"] {
+  .md-typeset table:not([class]) thead th {
+    background-color: #26475c; /* your chosen color */
+    color: #ffffff;            /* make sure text is readable */
+  }
+  .md-typeset table:not([class]) tbody tr:nth-child(odd) {
+    background-color: #293138; /* darker row */
+  }
+
+  .md-typeset table:not([class]) tbody tr:nth-child(even) {
+    background-color: #323c44; /* lighter row */
+  }
+}
+
+/* Target only bold (<strong> and <b>) text inside the main content area */
+[data-md-color-scheme="slate"]{
+  .md-content article strong,
+  .md-content article b {
+    color: #dbdbdb;
+  }
+
+  .md-content article a strong,
+  .md-content article a b {
+    color: inherit; /* reset for bold links */
+  }
+}
+
+/* Scoped only to main content */
+[data-md-color-scheme="slate"]{
+  .md-content .md-typeset code {
+    color: #eef8ff;
+    background-color: rgba(43, 65, 98);
+  }
+}
+[data-md-color-scheme="default"]{
+  .md-content .md-typeset code {
+    color: #2c5976;
+    background-color: rgba(236, 243, 255);
+  }
+}
+
