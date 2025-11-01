@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://docs.circuitstate.io/</loc>
+         <lastmod>2025-11-01</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.circuitstate.io/Hardware/</loc>
+         <lastmod>2025-11-01</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.circuitstate.io/Hardware/ESPNut/</loc>
+         <lastmod>2025-11-01</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.circuitstate.io/Hardware/ESPNut/ESPNut-D1/</loc>
+         <lastmod>2025-11-01</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.circuitstate.io/Hardware/ESPNut/ESPNut-D1/R0.1/</loc>
+         <lastmod>2025-11-01</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.circuitstate.io/Hardware/ESPNut/ESPNut-D1/R0.3/</loc>
+         <lastmod>2025-11-01</lastmod>
+    </url>
+</urlset>
