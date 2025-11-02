@@ -2,6 +2,16 @@
 # Changes
 
 #
+### **+05:30 01:13:01 PM 02-11-2025, Sunday**
+
+  - Site
+    - Added support for search.
+    - Added support for block captions.
+  - `ESPNut-D1-R0.3`
+    - Updated `Pinout & Wiring` section.
+    - Updated image caption styles.
+
+#
 ### **+05:30 08:52:38 PM 01-11-2025, Saturday**
 
   - Site

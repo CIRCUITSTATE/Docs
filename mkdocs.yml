@@ -34,6 +34,9 @@ theme:
     - navigation.top
     - navigation.instant
     - navigation.instant.progress
+    - search.suggest
+    - search.highlight
+    - search.share
 
 repo_url: https://github.com/CIRCUITSTATE/Docs
 repo_name: Docs
@@ -67,8 +70,10 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
+  - pymdownx.blocks.caption
 
 plugins:
+  - search
   - glightbox:
       touchNavigation: true
       loop: false

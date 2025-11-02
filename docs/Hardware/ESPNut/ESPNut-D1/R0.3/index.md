@@ -2,7 +2,7 @@
 
 ## Overview
 
-[**ESPNut-D1**](https://github.com/CIRCUITSTATE/ESPNut-D1) (pronounced as **"ee yes peanut"**) is a single-channel USB-to-Serial converter and Auto-Programmer for the ESP32 & ESP8266 series microcontrollers from *Espressif*. While there exists many such programmers, ESPNut is a completely open-source hardware (OSHW) project designed in the **KiCad** open-source EDA tool. **D1** is the first design variant of this project. You can download the source files of this design, modify them and redistribute them as you wish.
+[**ESPNut-D1**](https://github.com/CIRCUITSTATE/ESPNut-D1) (pronounced as **"ee yes peanut"**) is a single-channel **USB-to-Serial converter** and **Auto-Programmer** for the ESP32 & ESP8266 series microcontrollers from *Espressif*. While there exists many such programmers, ESPNut is a completely open-source hardware (OSHW) project designed in the [**KiCad**](https://www.kicad.org/) open-source EDA tool. **D1** is the first design variant of this project. Released under the [**MIT License**](https://github.com/CIRCUITSTATE/ESPNut-D1?tab=MIT-1-ov-file#readme), you can download the source files of this design, modify them and redistribute them as you wish.
 
 ESPNut-D1 is based on the popular **CH340** series USB-to-Serial converter chip from *WCH*. The serial port of the chip connects to the target microcontroller through its own serial port. Thanks to the built-in serial bootloader of the ESP series microcontrollers, you can effortlessly program them at any time. The ESPNut-D1 makes this process a bit more convenient.
 
@@ -46,7 +46,7 @@ ESPNut-D1 is based on the popular **CH340** series USB-to-Serial converter chip 
   6-pin ESP-PROG 1.27 mm header.
   6-pin JST-SH connector and solderpad for target ESP.
 - **Mechanical Mounting**  
-  2x M2 mounting holes.
+  2 x M2 mounting holes.
 
 ## Specifications
 
@@ -91,7 +91,16 @@ ESPNut-D1 is based on the popular **CH340** series USB-to-Serial converter chip 
 - **Mounting:** 30.5 x 30.5 mm (4 mm hole size)
 - **Weight:** 9.35 g
 
-## Pinout
+## Pinout & Wiring
+
+The following image shows the pinout of the 6-pin JST-SH connector and basic wiring of the ESPNut-D1-R0.3 with an **ESP12E** ESP8266 module. This configuration can be used for both programming and serial communication. The connection is the same for other ESP modules and chips. For just the serial communication, you only need to connect the `TX`, `RX` and `GND` pins.
+
+![Wiring ESPNut-D1-R0.3 with ESP12E ESP8266 module](../../../../assets/hardware/ESPNut/D1/R0.3/ESPNut-D1-R0.3-Wiring-with-ESP12E-R0.1-CIRCUITSTATE-Electronics-1_1.png){ loading=lazy }
+/// caption
+Wiring ESPNut-D1-R0.3 with ESP12E ESP8266 module
+///
+
+- [Download Wiring [PDF]](../../../../assets/hardware/ESPNut/D1/R0.3/ESPNut-D1-R0.3-Wiring-with-ESP12E-R0.1-CIRCUITSTATE-Electronics-1.pdf)
 
 ### USB-C Solderpads
 
@@ -127,8 +136,10 @@ ESPNut-D1 is based on the popular **CH340** series USB-to-Serial converter chip 
 
 ## Schematic
 
-![ESPNut-D1-R0.3 Schematic](../../../../assets/hardware/ESPNut/D1/R0.3/ESPNut-D1-R0.3-SCH-02082025-1_1.png)
+![ESPNut-D1-R0.3 Schematic](../../../../assets/hardware/ESPNut/D1/R0.3/ESPNut-D1-R0.3-SCH-02082025-1_1.png){ loading=lazy }
+/// caption
 ESPNut-D1-R0.3 Schematic
+///
 
 - [Download Schematic [PDF]](../../../../assets/hardware/ESPNut/D1/R0.3/ESPNut-D1-R0.3-SCH-25102025-1.pdf)
 
@@ -136,8 +147,10 @@ ESPNut-D1-R0.3 Schematic
 
 Following image shows the topology and components of the ESPNut-D1-R0.3 PCB.
 
-![ESPNut-D1-R0.3 Layout](../../../../assets/hardware/ESPNut/D1/R0.3/ESPNut-D1-R0.3-Layout-Drawing-R0.1-CIRCUITSTATE-Electronics-1.png)
+![ESPNut-D1-R0.3 Layout](../../../../assets/hardware/ESPNut/D1/R0.3/ESPNut-D1-R0.3-Layout-Drawing-R0.1-CIRCUITSTATE-Electronics-1.png){ loading=lazy }
+/// caption
 ESPNut-D1-R0.3 Layout
+///
 
 - [Download Layout Drawing [PDF]](../../../../assets/hardware/ESPNut/D1/R0.3/ESPNut-D1-R0.3-Layout-Drawing-R0.1-CIRCUITSTATE-Electronics-1.pdf)
 
@@ -145,8 +158,10 @@ ESPNut-D1-R0.3 Layout
 
 Following image shows the mechanical dimensions of the ESPNut-D1-R0.3 PCB. If you need more dimensions, please refer to the PCB design files or the STEP model.
 
-![ESPNut-D1-R0.3 Dimensions](../../../../assets/hardware/ESPNut/D1/R0.3/ESPNut-D1-R0.3-Dimension-Drawing-R0.1-CIRCUITSTATE-Electronics-1.png)
+![ESPNut-D1-R0.3 Dimensions](../../../../assets/hardware/ESPNut/D1/R0.3/ESPNut-D1-R0.3-Dimension-Drawing-R0.1-CIRCUITSTATE-Electronics-1.png){ loading=lazy }
+/// caption
 ESPNut-D1-R0.3 Dimensions
+///
 
 - [Download Dimension Drawing [PDF]](../../../../assets/hardware/ESPNut/D1/R0.3/ESPNut-D1-R0.3-Dimension-Drawing-R0.1-CIRCUITSTATE-Electronics-1.pdf)
 
@@ -163,11 +178,6 @@ ESPNut-D1 can function as both a **USB-to-Serial UART Converter** as well as an 
 !!! danger
 
     Supplying power to the target device with the wrong voltage selection may permanently damage your target device. Always double-check the voltage selection before connecting the target device.
-
-![Wiring ESPNut-D1-R0.3 with ESP12E ESP8266 module](../../../../assets/hardware/ESPNut/D1/R0.3/ESPNut-D1-R0.3-Wiring-with-ESP12E-R0.1-CIRCUITSTATE-Electronics-1_1.png)
-Wiring ESPNut-D1-R0.3 with ESP12E ESP8266 module
-
-- [Download Wiring [PDF]](../../../../assets/hardware/ESPNut/D1/R0.3/ESPNut-D1-R0.3-Wiring-with-ESP12E-R0.1-CIRCUITSTATE-Electronics-1.pdf)
 
 When the power is supplied to the target through ESPNut-D1, you can turn it on or off using the `PSW` slide switch. The extra `PCTRL` button can momentarily disconnect the power to the target. This is useful for putting ESP boards without a reset button into the bootloader mode. The power to the target is controlled through an electronic load switch. In case you want to bypass this feature, you can short the `BYP` solder-jumper. When the target power is on, the target power LED will turn on.
 
